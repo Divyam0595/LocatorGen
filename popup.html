@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Locator Generator Tool</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 12px;
+      min-width: 260px;
+    }
+    h1 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 13px;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    label {
+      font-size: 12px;
+      display: block;
+      margin-top: 4px;
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 4px;
+      margin-top: 2px;
+      font-size: 12px;
+    }
+    button {
+      margin-top: 8px;
+      width: 100%;
+      padding: 6px 8px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    small {
+      font-size: 11px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Locator Generator Tool</h1>
+
+  <h2>Option 1 settings (Java Page Object)</h2>
+  <small>These are ONLY used for Option 1. You can leave them empty for Option 2.</small>
+  <div>
+    <label>Package Name</label>
+    <input id="packageName" type="text" placeholder="e.g. com.example.pages">
+
+    <label>Class Name</label>
+    <input id="className" type="text" placeholder="e.g. LoginPage">
+  </div>
+
+  <button id="option1">Option 1: Generate Page Object for this page</button>
+  <button id="option2">Option 2: Cursor picker (XPath / Groovy / Playwright)</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Locator Generator Tool",
+    "version": "1.0.0",
+    "description": "Generate Java Page Objects and element locators (XPath, Groovy, Playwright) from the current page.",
+    "permissions": [
+      "activeTab"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "Locator Generator Tool"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
